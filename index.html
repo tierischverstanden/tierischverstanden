@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tierisch Verstanden – Content & Betreuung für Hunde, Katzen & Pferde | Maria Romanski</title>
+  <meta name="description" content="Sprechen Sie Tier? Ihre Kunden schon. Freelance Texterin und Content-Spezialistin für die Tierbranche — Texte, SEO und Websites für Hundeschulen, Tierärzte und Reitschulen. Deutschlandweit, remote.">
+  <meta name="keywords" content="Texterin Tierbranche, Content Hunde Katzen Pferde, Freelance Redakteurin Tier, Tiertexte, Website Texte Tierarzt, SEO Tierbranche, Content Hundeschule, Reitschule Texte, Maria Romanski">
+  <meta name="author" content="Maria Romanski">
+  <meta property="og:title" content="Tierisch Verstanden – Content für die Tierbranche">
+  <meta property="og:description" content="Texte, Strategie und Content für Hunde, Katzen & Pferde – von einer Freelancerin die Tiere wirklich versteht.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tierischverstanden.de">
+  <link rel="canonical" href="https://www.tierischverstanden.de">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sand: #e8f4f8;
+      --sand-dark: #d4eaf2;
+      --brown: #8a7355;
+      --brown-dark: #5c4a2e;
+      --brown-light: #c4b090;
+      --text: #2c2416;
+      --text-mid: #6b5a3e;
+      --text-light: #9a8a72;
+      --white: #ffffff;
+      --border: rgba(100,160,190,0.2);
+      --radius: 14px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--sand);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(232,244,248,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--brown); font-style: italic; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--brown-dark); }
+
+    /* LAYOUT */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+
+    /* HERO */
+    .hero {
+      padding: 6rem 2rem 5rem;
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+    .hero-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .badge-hund { background: #d4eaf2; color: #2a6a8a; }
+    .badge-katze { background: #fbeaf0; color: #993556; }
+    .badge-pferd { background: #e1f5ee; color: #0f6e56; }
+    .badge-remote { background: #e6f1fb; color: #185fa5; }
+
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--brown-dark);
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--brown); }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-mid);
+      font-weight: 300;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+      max-width: 520px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: #2a7a9a;
+      color: var(--white);
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .hero-cta:hover { background: #1d6080; }
+    .hero-cta-ghost {
+      display: inline-block;
+      border: 1px solid #8fc4d8;
+      color: var(--brown-dark);
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      margin-left: 1rem;
+      transition: all 0.2s;
+    }
+    .hero-cta-ghost:hover { background: #d4eaf2; }
+    .hero-avatar {
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: var(--sand-dark);
+      border: 2px solid var(--brown-light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 42px;
+      color: var(--brown);
+      flex-shrink: 0;
+    }
+
+    /* SECTIONS */
+    section { padding: 5rem 0; }
+    section:nth-child(even) { background: var(--white); }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .section-title em { font-style: italic; color: #2a7a9a; }
+
+    /* ÜBER MICH */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text);
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+    }
+    .about-text p:last-child { margin: 0; }
+    .about-text strong { font-weight: 500; color: var(--brown-dark); }
+    blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 19px;
+      color: #2a7a9a;
+      border-left: 2px solid #8fc4d8;
+      padding: 0.25rem 0 0.25rem 1.5rem;
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+    .about-facts { display: flex; flex-direction: column; gap: 1rem; }
+    .fact-card {
+      background: #d4eaf2;
+      border: 0.5px solid rgba(100,160,190,0.25);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+    .fact-card .fact-num {
+      font-family: 'Lora', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--brown);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .fact-card .fact-label {
+      font-size: 13px;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+
+    /* TIERE */
+    .tiere-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .tier-card {
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    section:nth-child(even) .tier-card { background: var(--sand); }
+    .tier-card:hover { transform: translateY(-3px); }
+    .tier-emoji { font-size: 36px; margin-bottom: 1rem; }
+    .tier-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      margin-bottom: 0.75rem;
+    }
+    .tier-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .tier-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+    .tier-tag {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 0.5px solid var(--border);
+      color: var(--text-mid);
+      font-weight: 400;
+    }
+
+    /* LEISTUNGEN */
+    .leistungen-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .leistung-card {
+      background: var(--sand);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+    section:nth-child(even) .leistung-card { background: var(--white); }
+    .leistung-icon {
+      width: 44px; height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 1rem;
+    }
+    .leistung-icon.amber { background: #d4eaf2; }
+    .leistung-icon.pink { background: #fbeaf0; }
+    .leistung-icon.teal { background: #e1f5ee; }
+    .leistung-icon.blue { background: #e6f1fb; }
+    .leistung-card h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--brown-dark);
+      margin-bottom: 0.5rem;
+    }
+    .leistung-card p {
+      font-size: 13px;
+      color: var(--text-mid);
+      font-weight: 300;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .leistung-list { list-style: none; }
+    .leistung-list li {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 300;
+      padding: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .leistung-list li::before {
+      content: '–';
+      color: var(--brown-light);
+      flex-shrink: 0;
+    }
+
+    /* KONTAKT */
+    .kontakt-inner {
+      max-width: 580px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+    }
+    .kontakt-inner p {
+      font-size: 15px;
+      color: var(--text-mid);
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+    .kontakt-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .kontakt-card {
+      background: var(--sand);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+    section:nth-child(even) .kontakt-card { background: var(--white); }
+    .kontakt-card .k-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .kontakt-card .k-value {
+      font-size: 14px;
+      color: var(--brown-dark);
+      font-weight: 400;
+    }
+    .kontakt-card .k-value a {
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .kontakt-card .k-value a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: #1a4a5e;
+      color: rgba(245,240,232,0.7);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+    .footer-name {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      color: var(--sand);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    footer p { font-size: 12px; font-weight: 300; line-height: 1.8; }
+    footer a { color: var(--brown-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-divider {
+      border: none;
+      border-top: 0.5px solid rgba(196,176,144,0.2);
+      margin: 1.5rem 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-avatar { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .tiere-grid { grid-template-columns: 1fr; }
+      .leistungen-grid { grid-template-columns: 1fr; }
+      .kontakt-cards { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">tierisch<span>verstanden</span></a>
+    <ul class="nav-links">
+      <li><a href="#ueber-mich">Über mich</a></li>
+      <li><a href="#tiere">Spezialisierung</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#portfolio">Referenzen</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <div class="hero-badges">
+        <span class="badge badge-hund">🐕 Hunde</span>
+        <span class="badge badge-katze">🐈 Katzen</span>
+        <span class="badge badge-pferd">🐴 Pferde</span>
+        <span class="badge badge-remote">🌍 Deutschlandweit</span>
+      </div>
+      <h1>Content & Betreuung<br>für die <em>Tierbranche.</em></h1>
+      <p class="hero-sub">Sprechen Sie Tier? Ihre Kunden schon. — Texte, Strategie und komplette Websites für die Tierbranche, von jemandem der die Sprache wirklich spricht.</p>
+      <a href="#kontakt" class="hero-cta">Jetzt anfragen</a>
+      <a href="#leistungen" class="hero-cta-ghost">Leistungen ansehen</a>
+    </div>
+    <div class="hero-avatar">MR</div>
+  </div>
+
+  <!-- ÜBER MICH -->
+  <section id="ueber-mich">
+    <div class="container">
+      <p class="section-label">Über mich</p>
+      <h2 class="section-title">Wer Tiere kennt,<br><em>schreibt anders über sie.</em></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Ich bin <strong>Maria Romanski</strong> — freiberufliche Content-Spezialistin, Redakteurin und Beraterin mit über 20 Jahren Erfahrung. Tiere sind nicht nur mein Thema, sie sind mein Alltag. Genau das spürt man in jedem Text, den ich schreibe.</p>
+          <p>Ich unterstütze Tierärzte, Züchter, Reitschulen, Tiersittings und Tierproduktmarken dabei, ihre Geschichte zu erzählen — authentisch, suchmaschinenoptimiert und mit echtem Verständnis für die Branche.</p>
+          <p>Mein Hintergrund liegt im Journalismus und in der Content-Strategie. Seit 2007 arbeite ich selbstständig, zweisprachig auf Deutsch und Englisch, und betreue Kunden deutschlandweit — remote und flexibel.</p>
+          <p>Hunde begleiten mich seit meiner Kindheit — sie sind ein selbstverständlicher Teil meines Lebens. Aktuell befinde ich mich zudem in der Ausbildung zur <strong>Tiertherapeutin</strong>, was mein Verständnis für Tier-Mensch-Beziehungen noch einmal auf eine neue Ebene bringt.</p>
+          <blockquote>Sprechen Sie Tier? Ihre Kunden schon. Ich auch.</blockquote>
+        </div>
+        <div class="about-facts">
+          <div class="fact-card">
+            <div class="fact-num">20+</div>
+            <div class="fact-label">Jahre Erfahrung in Redaktion & Content</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-num">2007</div>
+            <div class="fact-label">Selbstständig als Freelancerin</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-num">DE / EN</div>
+            <div class="fact-label">Zweisprachige Texte & Beratung</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-num">🐕🐈🐴</div>
+            <div class="fact-label">Spezialisiert auf Hunde, Katzen & Pferde</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERE -->
+  <section id="tiere">
+    <div class="container">
+      <p class="section-label">Spezialisierung</p>
+      <h2 class="section-title">Drei Tierarten.<br><em>Eine Expertin.</em></h2>
+      <div class="tiere-grid">
+        <div class="tier-card">
+          <div class="tier-emoji">🐕</div>
+          <h3>Hunde</h3>
+          <p>Vom Welpentraining bis zur Seniorenbetreuung — ich kenne die Welt der Hundehalter und ihrer Dienstleister.</p>
+          <div class="tier-tags">
+            <span class="tier-tag">Hundeschulen</span>
+            <span class="tier-tag">Trainer</span>
+            <span class="tier-tag">Tagesbetreuung</span>
+            <span class="tier-tag">Zubehör</span>
+            <span class="tier-tag">Tierärzte</span>
+          </div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-emoji">🐈</div>
+          <h3>Katzen</h3>
+          <p>Katzenmenschen ticken anders — und suchen anders. Ich schreibe Texte die genau diese Zielgruppe erreichen.</p>
+          <div class="tier-tags">
+            <span class="tier-tag">Katzensitter</span>
+            <span class="tier-tag">Züchter</span>
+            <span class="tier-tag">Mobile Betreuung</span>
+            <span class="tier-tag">Pflegeprodukte</span>
+          </div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-emoji">🐴</div>
+          <h3>Pferde</h3>
+          <p>Die Pferdebranche hat ihre eigene Sprache. Ich spreche sie — und übersetze sie für eure Kunden.</p>
+          <div class="tier-tags">
+            <span class="tier-tag">Reitschulen</span>
+            <span class="tier-tag">Stallbetreiber</span>
+            <span class="tier-tag">Reitsport</span>
+            <span class="tier-tag">Reittherapie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="container">
+      <p class="section-label">Leistungen</p>
+      <h2 class="section-title">Was ich für euch<br><em>tun kann.</em></h2>
+      <div class="leistungen-grid">
+        <div class="leistung-card">
+          <div class="leistung-icon amber">✍️</div>
+          <h3>Content & Redaktion</h3>
+          <p>Texte die gefunden werden und überzeugen — für Website, Blog und Social Media.</p>
+          <ul class="leistung-list">
+            <li>Websitetexte & Landingpages</li>
+            <li>Blogartikel & Fachbeiträge</li>
+            <li>Social Media Content</li>
+            <li>Newsletter & E-Mail-Texte</li>
+            <li>Pressemitteilungen</li>
+          </ul>
+        </div>
+        <div class="leistung-card">
+          <div class="leistung-icon pink">📊</div>
+          <h3>Strategie & SEO</h3>
+          <p>Mehr Sichtbarkeit bei Google — mit einer Strategie die zur Tierbranche passt.</p>
+          <ul class="leistung-list">
+            <li>Content-Strategie & Planung</li>
+            <li>SEO-Optimierung & Audits</li>
+            <li>Keyword-Recherche</li>
+            <li>Redaktionsplanung</li>
+            <li>Wettbewerbsanalyse</li>
+          </ul>
+        </div>
+        <div class="leistung-card">
+          <div class="leistung-icon teal">🐾</div>
+          <h3>Beratung Tierbetreuung</h3>
+          <p>Für Betriebe in der Tierbetreuung — vom Konzept bis zur digitalen Präsenz.</p>
+          <ul class="leistung-list">
+            <li>Konzept & Positionierung</li>
+            <li>Kommunikationsstrategie</li>
+            <li>Aufbau digitaler Präsenz</li>
+            <li>Texte für Betreuungsbetriebe</li>
+            <li>Beratung & Projektbegleitung</li>
+          </ul>
+        </div>
+        <div class="leistung-card">
+          <div class="leistung-icon blue">🌍</div>
+          <h3>Zweisprachig DE / EN</h3>
+          <p>Texte für den deutschsprachigen und internationalen Markt — aus einer Hand.</p>
+          <ul class="leistung-list">
+            <li>Deutsche & englische Texte</li>
+            <li>Lokalisierung & Übersetzung</li>
+            <li>Internationale Märkte</li>
+            <li>Deutschlandweit & remote</li>
+            <li>Schnelle Verfügbarkeit</li>
+          </ul>
+        </div>
+        <div class="leistung-card" style="grid-column: 1 / -1;">
+          <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
+            <div class="leistung-icon" style="background: #f5f0e8; flex-shrink: 0;">💻</div>
+            <div style="flex: 1;">
+              <h3>Website-Erstellung — das komplette Paket</h3>
+              <p>Ich baue nicht nur Texte — ich baue ganze Websites. Von der Konzeption über Design und Entwicklung bis zum fertigen Launch. Alles aus einer Hand, ohne Schnittstellenverluste.</p>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 0.5rem;">
+                <ul class="leistung-list">
+                  <li>Konzept & Struktur</li>
+                  <li>Design & Layout</li>
+                  <li>Responsive & mobil</li>
+                </ul>
+                <ul class="leistung-list">
+                  <li>Alle Texte & Inhalte</li>
+                  <li>SEO-Setup von Anfang an</li>
+                  <li>Zweisprachig möglich</li>
+                </ul>
+                <ul class="leistung-list">
+                  <li>Squarespace, WordPress</li>
+                  <li>GitHub Pages / statisch</li>
+                  <li>Übergabe & Einweisung</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <p class="section-label">Referenzen</p>
+      <h2 class="section-title">Projekte die<br><em>für sich sprechen.</em></h2>
+      <div class="leistungen-grid" style="margin-top: 2.5rem;">
+        <div class="leistung-card" style="position: relative;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: #e1f5ee; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;">🐴</div>
+            <div>
+              <h3 style="margin: 0 0 2px;">Ponyreitschule Daniela Maier</h3>
+              <a href="https://www.ponyreitschule-daniela-maier.de" target="_blank" style="font-size: 12px; color: var(--brown); text-decoration: none; font-weight: 300;">ponyreitschule-daniela-maier.de ↗</a>
+            </div>
+          </div>
+          <p style="font-size: 13px; color: var(--text-mid); font-weight: 300; line-height: 1.65; margin-bottom: 1rem;">Kleine Ponyreitschule in Haibach/Bayern. Entwicklung von Website-Texten, Logo-Modernisierung und Kommunikationsstrategie — mit dem Fokus auf eine warme, authentische Außendarstellung für Familien und Kinder.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="tier-tag">Website-Erstellung</span>
+            <span class="tier-tag">Websitetexte</span>
+            <span class="tier-tag">Logo</span>
+            <span class="tier-tag">Kommunikation</span>
+            <span class="tier-tag">Pferde</span>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: var(--text-light); font-weight: 300; margin-top: 1.5rem; text-align: center;">Weitere Referenzen auf Anfrage.</p>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="container">
+      <p class="section-label">Kontakt</p>
+      <h2 class="section-title" style="text-align:center;">Bereit wenn ihr es seid.<br><em>Meldet euch.</em></h2>
+      <div class="kontakt-inner">
+        <p>Ob konkretes Projekt, erste Fragen oder einfach mal kennenlernen — ich freue mich auf eure Nachricht. Deutschlandweit, remote, unkompliziert.</p>
+        <div class="kontakt-cards">
+          <div class="kontakt-card">
+            <div class="k-label">E-Mail</div>
+            <div class="k-value"><a href="mailto:hallo@tierischverstanden.de">hallo@tierischverstanden.de</a></div>
+          </div>
+          <div class="kontakt-card">
+            <div class="k-label">Website</div>
+            <div class="k-value"><a href="https://www.content-lane.com" target="_blank">content-lane.com</a></div>
+          </div>
+          <div class="kontakt-card">
+            <div class="k-label">Standort</div>
+            <div class="k-value">Aschaffenburg / Bayern</div>
+          </div>
+          <div class="kontakt-card">
+            <div class="k-label">Verfügbarkeit</div>
+            <div class="k-value">Deutschlandweit · Remote</div>
+          </div>
+        </div>
+        <a href="mailto:hallo@tierischverstanden.de" class="hero-cta">Jetzt anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Tierisch Verstanden</p>
+    <p>Maria Romanski · Freiberufliche Content-Spezialistin · Aschaffenburg</p>
+    <hr class="footer-divider">
+    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · © 2026 Maria Romanski</p>
+  </footer>
+
+</body>
+</html>
